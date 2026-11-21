@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>matahari - Fashion Store</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="matahari.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="#" class="logo" aria-label="Matahari">
+            <img src="logomatahari.jpeg" alt="Logo Matahari" class="logo-img">
+            <span class="logo-brand-text">matahari</span>
+        </a>
+
+        <nav class="nav-links" id="categoryNav">
+            <button type="button" class="nav-filter active" data-category="SEMUA">SEMUA</button>
+            <button type="button" class="nav-filter" data-category="PRIA">PRIA</button>
+            <button type="button" class="nav-filter" data-category="WANITA">WANITA</button>
+            <button type="button" class="nav-filter" data-category="ANAK">ANAK</button>
+            <button type="button" class="nav-filter" data-category="SEPATU">SEPATU</button>
+        </nav>
+
+        <div class="nav-icons">
+            <a href="#" id="openLoginBtn" title="Form Akun">
+                <span class="glyphicon glyphicon-user"></span>
+            </a>
+
+            <a href="#" id="openCartBtn" title="Keranjang Belanja" class="cart-trigger">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span class="cart-count" id="cartCount">0</span>
+            </a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-img-wrapper">
+            <img src="banner.jpeg" alt="Koleksi Fashion Terbaru">
+        </div>
+        <div class="hero-caption">
+            <span class="hero-tag">EDISI MUSIM INI</span>
+            <h1>KOLEKSI TERBARU</h1>
+            <p>Mulai dari Rp 99.900</p>
+        </div>
+    </section>
+
+    <section class="products" id="produk">
+        <div class="section-header">
+            <h2 class="section-title">Pilihan Untukmu</h2>
+            <span class="filter-status" id="filterStatus">Menampilkan semua produk</span>
+        </div>
+
+        <div class="product-grid" id="productGrid">
+            <article class="product-card" data-category="WANITA" data-id="1" data-brand="Connexion" data-name="Sweater Rajut Wanita" data-price="199900" data-img="produk1.webp">
+                <div class="img-zoom-box">
+                    <img src="produk1.webp" alt="Sweater Rajut Wanita | Connexion">
+                </div>
+                <div class="product-info">
+                    <span class="brand">Connexion</span>
+                    <p class="name">Sweater Rajut Wanita</p>
+                    <p class="price">Rp 199.900</p>
+                    <button type="button" class="btn-add-cart">Beli</button>
+                </div>
+            </article>
+
+            <article class="product-card" data-category="PRIA" data-id="2" data-brand="COLE" data-name="Jaket Harrington Pria" data-price="299900" data-img="produk2.webp">
+                <div class="img-zoom-box">
+                    <img src="produk2.webp" alt="Jaket Harrington Pria | COLE">
+                </div>
+                <div class="product-info">
+                    <span class="brand">COLE</span>
+                    <p class="name">Jaket Harrington Pria</p>
+                    <p class="price">Rp 299.900</p>
+                    <button type="button" class="btn-add-cart">Beli</button>
+                </div>
+            </article>
+
+            <article class="product-card" data-category="SEPATU" data-id="3" data-brand="VOLO" data-name="Sepatu Flat" data-price="179900" data-img="produk3.webp">
+                <div class="img-zoom-box">
+                    <img src="produk3.webp" alt="Sepatu Flat | VOLO">
+                </div>
+                <div class="product-info">
+                    <span class="brand">VOLO</span>
+                    <p class="name">Sepatu Flat</p>
+                    <p class="price">Rp 179.900</p>
+                    <button type="button" class="btn-add-cart">Beli</button>
+                </div>
+            </article>
+
+            <article class="product-card" data-category="PRIA" data-id="4" data-brand="NEVADA" data-name="Kaos Oversize" data-price="89900" data-img="produk4.jpeg">
+                <div class="img-zoom-box">
+                    <img src="produk4.jpeg" alt="Kaos Oversize | NEVADA">
+                </div>
+                <div class="product-info">
+                    <span class="brand">NEVADA</span>
+                    <p class="name">Kaos Oversize</p>
+                    <p class="price">Rp 89.900</p>
+                    <button type="button" class="btn-add-cart">Beli</button>
+                </div>
+            </article>
+
+            <article class="product-card" data-category="ANAK" data-id="5" data-brand="Little M" data-name="Jaket anak" data-price="149900" data-img="produk5.jpeg">
+                <div class="img-zoom-box">
+                    <img src="produk5.jpeg" alt="Jaket anak | Little M">
+                </div>
+                <div class="product-info">
+                    <span class="brand">Little M</span>
+                    <p class="name">Jaket anak</p>
+                    <p class="price">Rp 149.900</p>
+                    <button type="button" class="btn-add-cart">Beli</button>
+                </div>
+            </article>
+
+            <article class="product-card" data-category="WANITA" data-id="6" data-brand="NEVADA" data-name="Celana Jeans Wide Leg" data-price="249900" data-img="produk6.jpeg">
+                <div class="img-zoom-box">
+                    <img src="produk6.jpeg" alt="Celana Jeans Wide Leg | NEVADA">
+                </div>
+                <div class="product-info">
+                    <span class="brand">NEVADA</span>
+                    <p class="name">Celana Jeans Wide Leg</p>
+                    <p class="price">Rp 249.900</p>
+                    <button type="button" class="btn-add-cart">Beli</button>
+                </div>
+            </article>
+
+            <article class="product-card" data-category="SEPATU" data-id="7" data-brand="VOLO" data-name="Comfort Sepatu Sneakers" data-price="279900" data-img="produk7.jpeg">
+                <div class="img-zoom-box">
+                    <img src="produk7.jpeg" alt="Comfort Sepatu Sneakers | VOLO">
+                </div>
+                <div class="product-info">
+                    <span class="brand">VOLO</span>
+                    <p class="name">Comfort Sepatu Sneakers</p>
+                    <p class="price">Rp 279.900</p>
+                    <button type="button" class="btn-add-cart">Beli</button>
+                </div>
+            </article>
+
+            <article class="product-card" data-category="WANITA" data-id="8" data-brand="CONNEXION" data-name="Kemeja Linen Kasual" data-price="189900" data-img="produk8.jpeg">
+                <div class="img-zoom-box">
+                    <img src="produk8.jpeg" alt="Kemeja Linen Kasual | CONNEXION">
+                </div>
+                <div class="product-info">
+                    <span class="brand">CONNEXION</span>
+                    <p class="name">Kemeja Linen Kasual</p>
+                    <p class="price">Rp 189.900</p>
+                    <button type="button" class="btn-add-cart">Beli</button>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-newsletter">
+            <a href="#" class="footer-logo" aria-label="Matahari">
+                <img src="logomatahari.jpeg" alt="Logo Matahari" class="footer-logo-img">
+                <span class="logo-brand-text">matahari</span>
+            </a>
+            <p class="newsletter-title">LANGGANAN NEWSLETTER</p>
+
+            <form id="newsletterForm" class="newsletter-form" novalidate>
+                <div class="newsletter-box" id="newsletterBox">
+                    <input type="email" id="newsletterEmail" placeholder="Masukkan email Anda" autocomplete="email">
+                    <button type="submit" class="newsletter-submit" aria-label="Kirim Langganan Newsletter">
+                        <i class="fa-regular fa-envelope"></i>
+                    </button>
+                </div>
+                <small class="newsletter-feedback" id="newsletterFeedback"></small>
+            </form>
+        </div>
+
+        <div class="footer-mid-group">
+            <nav class="footer-links" aria-label="Kategori Footer">
+                <a href="#produk" class="footer-cat-link" data-category="PRIA">Pria</a>
+                <a href="#produk" class="footer-cat-link" data-category="WANITA">Wanita</a>
+                <a href="#produk" class="footer-cat-link" data-category="ANAK">Anak</a>
+                <a href="#produk" class="footer-cat-link" data-category="SEPATU">Sepatu</a>
+            </nav>
+
+            <p class="footer-hours">Layanan Pelanggan: Senin – Minggu, 09.00 – 21.00 WIB</p>
+        </div>
+
+        <p class="footer-copy">&copy; 2026 Matahari Fashion Store</p>
+    </footer>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <button type="button" class="close-btn" id="closeLoginBtn" aria-label="Tutup">
+                <span class="glyphicon glyphicon-remove"></span>
+            </button>
+
+            <h2>Masuk</h2>
+            <div class="red-line"></div>
+
+            <form id="loginForm" novalidate>
+                <div class="form-group">
+                    <label for="fullName">NAMA LENGKAP</label>
+                    <div class="field-box" id="nameBox">
+                        <input type="text" id="fullName" placeholder="Nama lengkap Anda" autocomplete="name">
+                    </div>
+                    <small class="error-msg" id="nameError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">EMAIL</label>
+                    <div class="field-box" id="emailBox">
+                        <input type="email" id="email" placeholder="nama@email.com" autocomplete="email">
+                    </div>
+                    <small class="error-msg" id="emailError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">TELEPON</label>
+                    <div class="phone-input" id="phoneBox">
+                        <span class="prefix">+62</span>
+                        <input type="text" id="phone" placeholder="81234567890" autocomplete="tel">
+                    </div>
+                    <small class="error-msg" id="phoneError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">KATA SANDI</label>
+                    <div class="password-input" id="passwordBox">
+                        <input type="password" id="password" placeholder="Min. 8 karakter, huruf & angka" autocomplete="current-password">
+                        <i class="fa-solid fa-eye-slash" id="togglePassword"></i>
+                    </div>
+                    <small class="error-msg" id="passwordError"></small>
+                </div>
+
+                <div class="form-group">
+                    <div class="checkbox-group" id="robotBox">
+                        <input type="checkbox" id="notRobot">
+                        <label for="notRobot">Saya bukan robot</label>
+                    </div>
+                    <small class="error-msg" id="robotError"></small>
+                </div>
+
+                <div class="form-status" id="loginSuccessMsg"></div>
+
+                <button type="submit" class="btn-submit">MASUK</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="cartModal" class="modal">
+        <div class="modal-content cart-modal-box">
+            <button type="button" class="close-btn" id="closeCartBtn" aria-label="Tutup Keranjang">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <h2>Keranjang</h2>
+            <div class="red-line"></div>
+
+            <div id="cartItemsContainer" class="cart-items"></div>
+
+            <div class="cart-summary">
+                <div class="cart-total-row">
+                    <span>Total</span>
+                    <strong id="cartTotalPrice">Rp 0</strong>
+                </div>
+                <div class="form-status" id="checkoutMsg"></div>
+                <button type="button" class="btn-submit" id="checkoutBtn">CHECKOUT</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="productModal" class="modal">
+        <div class="modal-content product-modal-box">
+            <button type="button" class="close-btn" id="closeProductBtn" aria-label="Tutup Detail Produk">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="modal-img-zoom">
+                <img id="modalImg" src="" alt="Preview Produk">
+            </div>
+            <span class="brand" id="modalBrand"></span>
+            <h3 id="modalTitle"></h3>
+            <p class="price" id="modalPrice"></p>
+            <button type="button" class="btn-submit" id="modalBuyBtn">BELI SEKARANG</button>
+        </div>
+    </div>
+
+    <script src="matahari.js"></script>
+</body>
+</html>
